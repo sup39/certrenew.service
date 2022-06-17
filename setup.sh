@@ -14,3 +14,10 @@ Next step:
 (2) $ sudo systemctl enable certrenew.service certrenew.timer certrenew.path
 (3) $ sudo systemctl start certrenew.service certrenew.timer certrenew.target certrenew.path
 EOF
+
+if [ -z "$EDITOR" ]; then
+  for EDITOR in vim vi nano ""; do
+    if command -v "$EDITOR" &>/dev/null; then break; fi
+  done
+fi
+[ -z "$EDITOR" ] || "$EDITOR" "$dst/certrenew.service"
