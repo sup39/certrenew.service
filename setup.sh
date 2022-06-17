@@ -7,6 +7,8 @@ if [ ! -w "$dst" ]; then
 fi
 wget -P "$dst" "$baseURL/certrenew.service" "$baseURL/certrenew.timer" "$baseURL/certrenew.target" "$baseURL/certrenew.path"
 cat <<EOF
+
+
 Next step:
 (1) edit $dst/certrenew.service
 (2) $ sudo systemctl enable certrenew.service certrenew.timer certrenew.path
