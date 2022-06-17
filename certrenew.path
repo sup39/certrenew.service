@@ -1,0 +1,8 @@
+[Unit]
+Description=Restart services which use SSL when the cert directory changes
+
+[Path]
+PathChanged=/etc/letsencrypt/live
+
+[Install]
+WantedBy=multi-user.target

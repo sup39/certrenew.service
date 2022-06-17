@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer to renew letsencrypt certs periodically
+
+[Timer]
+OnCalendar=*-*-4,14,24 04:15:15
+RandomizedDelaySec=31m17s
+
+[Install]
+WantedBy=timers.target
