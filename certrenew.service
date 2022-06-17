@@ -10,10 +10,10 @@ Type=simple
 # (3) check if the credentials file is correct
 
 ## cloudflare
-#ExecStart=/usr/local/bin/certbot renew --non-interactive --agree-tos --preferred-challenges dns --authenticator dns-cloudflare --dns-cloudflare-credentials /etc/certbot/cloudflare.ini --dns-cloudflare-propagation-seconds 10
+#ExecStart=/usr/bin/certbot renew --non-interactive --agree-tos --preferred-challenges dns --authenticator dns-cloudflare --dns-cloudflare-credentials /etc/certbot/cloudflare.ini --dns-cloudflare-propagation-seconds 10
 
 ## porkbun
-#ExecStart=/usr/local/bin/certbot renew --non-interactive --agree-tos --preferred-challenges dns --authenticator dns-porkbun --dns-porkbun-credentials /etc/certbot/porkbun.ini --dns-porkbun-propagation-seconds 10
+#ExecStart=/usr/bin/certbot renew --non-interactive --agree-tos --preferred-challenges dns --authenticator dns-porkbun --dns-porkbun-credentials /etc/certbot/porkbun.ini --dns-porkbun-propagation-seconds 10
 
 [Install]
 WantedBy=multi-user.target
